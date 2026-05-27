@@ -1,0 +1,7 @@
+.env
+.copilotignore
+__pycache__/
+.venv/
+vedeo-gen/
+face-swap/
+spicy/
