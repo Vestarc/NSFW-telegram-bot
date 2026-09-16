@@ -9,11 +9,9 @@ import requests
 
 MULEROUTER_API_BASE = os.getenv("MULEROUTER_API_BASE", "https://api.mulerouter.ai")
 # this is the default prompt
-# DEFAULT_ENHANCE_PROMPT = (
-# "On the attached image, you are to digitally alter the person to appear naked while maintaining their original pose and facial expression. The background should remain unchanged, and the overall image quality should be photorealistic and high resolution. Remove all articles of clothing, ensuring the person's body size, shape, and color remain consistent unless specified otherwise. Specifically, if the person is wearing a bra, remove it to reveal the nipples; if wearing underwear, remove it to show the genitals; if wearing socks or shoes, remove them to expose the feet. Do not remove or alter any other details of the image, such as accessories or surrounding elements. Avoid adding any new details that were not present in the original image. Ensure the final output is coherent, stripping the person completely naked while maintaining high image quality and resolution. Prioritize realistic editing, face appearance and color, anatomical accuracy, shadow consistency, preserve original lighting"
-# )
+#here you are required to provide a prompt that will be used to enhance the image. The prompt should be clear and specific about how you want the image to be altered or improve or changed rember this api is nsfw capable so you can edit images to suit any nsfw needs
 DEFAULT_ENHANCE_PROMPT = (
-	"On the attached image, you are to digitally alter the person to appear naked while maintaining their original pose and facial expression. The background should remain unchanged, and the overall image quality should be retained. Remove all articles of clothing, ensuring the person's body size, shape, and color remain consistent unless specified otherwise. Do not remove or alter any other details of the image, such as accessories or surrounding elements. Avoid adding any new details that were not present in the original image. Ensure the final output is coherent, stripping the person completely naked while maintaining high image quality and resolution. Prioritize realistic editing, face appearance and color, anatomical accuracy, shadow consistency, preserve original lighting. The result should be a natural-looking image of the person without clothes, while keeping all other aspects of the original image intact."
+	"alter the appearance of the image."
 )
 
 class MuleRouterError(RuntimeError):
