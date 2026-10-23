@@ -154,5 +154,6 @@ def send_photo(chat_id, photo, caption=None):
 
 if __name__ == '__main__':
     set_webhook()
-    print("Starting Flask server on port 5000...")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    print(f"Starting Flask server on port {port}...")
+    app.run(host='0.0.0.0', port=port, debug=False)
